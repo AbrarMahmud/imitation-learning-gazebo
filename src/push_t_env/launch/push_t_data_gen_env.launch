@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="t_scale" default="0.25" doc="Scale of the Push-T objects"/>
+  
+  <arg name="cam_x" default="0.15" />
+  <arg name="cam_y" default="0.0" />
+  <arg name="cam_z" default="1.2" />
+  <arg name="cam_pitch" default="1.5708" doc="90 degrees pointing down"/>
+
+  <arg name="pipeline" default="ompl" doc="Planning pipeline to use with MoveIt"/>
+
+  <arg name="gazebo_gui" default="true" doc="Start Gazebo GUI"/>
+  <arg name="paused" default="false" doc="Start Gazebo paused"/>
+  
+  <arg name="world_name" default="$(find push_t_env)/worlds/push_t_task.world" doc="Gazebo world file"/>
+  <arg name="world_pose" default="-x 0 -y 0 -z 0.5 -R 0 -P 0 -Y 0" doc="Pose to spawn the robot at"/>
+
+
+  <include file="$(find moveit_sol)/launch/gazebo.launch" pass_all_args="true"/>
+
+<!--  <include file="$(find moveit_sol)/launch/demo.launch" pass_all_args="true">
+    <arg name="load_robot_description" value="false" />
+    <arg name="moveit_controller_manager" value="ros_control" />
+  </include> -->
+
+  <node name="rqt_joint_trajectory_controller" 
+        pkg="rqt_joint_trajectory_controller" 
+        type="rqt_joint_trajectory_controller" 
+        output="screen" />
+        
+        
+        
+        <!--
+
+  <param name="t_object_desc" command="$(find xacro)/xacro '$(find push_t_env)/urdf/t_object.xacro' scale:=$(arg t_scale)" />
+  <node name="spawn_t_obj" pkg="gazebo_ros" type="spawn_model" 
+        args="-urdf -param t_object_desc -model t_push_object -x 0.17 -y -0.15 -z 0.51" respawn="false" />
+
+  <param name="t_mark_desc" command="$(find xacro)/xacro '$(find push_t_env)/urdf/t_mark.xacro' scale:=$(arg t_scale)" />
+  <node name="spawn_t_mark" pkg="gazebo_ros" type="spawn_model" 
+        args="-urdf -param t_mark_desc -model t_target_mark -x 0.18 -y 0.12 -z 0.501" respawn="false" />
+        
+        -->
+        
+  <param name="o_object_desc" command="$(find xacro)/xacro '$(find push_t_env)/urdf/o_object.xacro' scale:=$(arg t_scale)" />
+  <node name="spawn_o_obj" pkg="gazebo_ros" type="spawn_model" 
+        args="-urdf -param o_object_desc -model o_push_object -x 0.17 -y -0.15 -z 0.51" respawn="false" />
+
+  <param name="o_mark_desc" command="$(find xacro)/xacro '$(find push_t_env)/urdf/o_mark.xacro' scale:=$(arg t_scale)" />
+  <node name="spawn_o_mark" pkg="gazebo_ros" type="spawn_model" 
+        args="-urdf -param o_mark_desc -model t_target_mark -x 0.18 -y 0.12 -z 0.501" respawn="false" />        
+        
+        
+        
+        
+        
+
+  <param name="camera_desc" command="$(find xacro)/xacro '$(find push_t_env)/urdf/camera.xacro'" />
+  <node name="spawn_camera" pkg="gazebo_ros" type="spawn_model" 
+        args="-urdf -param camera_desc -model overhead_camera -x $(arg cam_x) -y $(arg cam_y) -z $(arg cam_z) -P $(arg cam_pitch)" respawn="false" />
+<node name="overhead_camera_viewer" 
+        pkg="rqt_image_view" 
+        type="rqt_image_view" 
+        args="/push_t/overhead_camera/image_raw" 
+        output="screen" />
+</launch>

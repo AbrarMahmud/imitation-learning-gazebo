@@ -1,0 +1,4 @@
+moveit_solver
+/home/ifaz/ros_proj_noetic/Imitation_learn_3dof/devel/.private/moveit_solver/lib/pkgconfig/moveit_solver.pc /home/ifaz/ros_proj_noetic/Imitation_learn_3dof/devel/lib/pkgconfig/moveit_solver.pc
+/home/ifaz/ros_proj_noetic/Imitation_learn_3dof/devel/.private/moveit_solver/share/moveit_solver/cmake/moveit_solverConfig-version.cmake /home/ifaz/ros_proj_noetic/Imitation_learn_3dof/devel/share/moveit_solver/cmake/moveit_solverConfig-version.cmake
+/home/ifaz/ros_proj_noetic/Imitation_learn_3dof/devel/.private/moveit_solver/share/moveit_solver/cmake/moveit_solverConfig.cmake /home/ifaz/ros_proj_noetic/Imitation_learn_3dof/devel/share/moveit_solver/cmake/moveit_solverConfig.cmake

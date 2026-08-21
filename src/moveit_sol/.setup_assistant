@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: il_three_dof_servo_arm_urdf_compatible_description
+    relative_path: urdf/il_three_dof_servo_arm_urdf_compatible.xacro
+    xacro_args: ""
+  SRDF:
+    relative_path: config/il_three_dof_servo_arm_urdf_compatible.srdf
+  CONFIG:
+    author_name: aa
+    author_email: aa@aa.com
+    generated_timestamp: 1780485150

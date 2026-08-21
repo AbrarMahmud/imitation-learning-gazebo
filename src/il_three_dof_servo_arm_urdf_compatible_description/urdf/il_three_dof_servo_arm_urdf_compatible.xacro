@@ -1,0 +1,304 @@
+<?xml version="1.0" ?>
+<robot name="il_three_dof_servo_arm_urdf_compatible" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find il_three_dof_servo_arm_urdf_compatible_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find il_three_dof_servo_arm_urdf_compatible_description)/urdf/il_three_dof_servo_arm_urdf_compatible.trans" />
+<xacro:include filename="$(find il_three_dof_servo_arm_urdf_compatible_description)/urdf/il_three_dof_servo_arm_urdf_compatible.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="0.0 0.0 0.015" rpy="0 0 0"/>
+    <mass value="1.907549999999999"/>
+    <inertia ixx="0.001431" iyy="0.001431" izz="0.002575" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://il_three_dof_servo_arm_urdf_compatible_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://il_three_dof_servo_arm_urdf_compatible_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_1_1_1">
+  <inertial>
+    <origin xyz="0.010722263946288085 -0.0010298469529679576 0.02155785221673978" rpy="0 0 0"/>
+    <mass value="0.10446533796903502"/>
+    <inertia ixx="1.9e-05" iyy="3.1e-05" izz="2.1e-05" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.045 -0.0 -0.03" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://il_three_dof_servo_arm_urdf_compatible_description/meshes/link_1_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.045 -0.0 -0.03" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://il_three_dof_servo_arm_urdf_compatible_description/meshes/link_1_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_1_2_1">
+  <inertial>
+    <origin xyz="0.03039981873219752 -1.3654025610418787e-14 -0.02549999999998632" rpy="0 0 0"/>
+    <mass value="0.022671389167279683"/>
+    <inertia ixx="1.4e-05" iyy="2.2e-05" izz="1e-05" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.06575 -0.0 -0.0776" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://il_three_dof_servo_arm_urdf_compatible_description/meshes/link_1_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.06575 -0.0 -0.0776" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://il_three_dof_servo_arm_urdf_compatible_description/meshes/link_1_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_1_3_1">
+  <inertial>
+    <origin xyz="0.022100181267802443 -1.3645906135543732e-14 -1.3704315460216776e-14" rpy="0 0 0"/>
+    <mass value="0.022671389167279683"/>
+    <inertia ixx="1.4e-05" iyy="2.2e-05" izz="1e-05" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.11825 -0.0 -0.0521" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://il_three_dof_servo_arm_urdf_compatible_description/meshes/link_1_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.11825 -0.0 -0.0521" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://il_three_dof_servo_arm_urdf_compatible_description/meshes/link_1_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_2_1_1">
+  <inertial>
+    <origin xyz="0.010027736053711822 0.001029846952968002 -0.02604214778326025" rpy="0 0 0"/>
+    <mass value="0.10446533796903502"/>
+    <inertia ixx="1.9e-05" iyy="3.1e-05" izz="2.1e-05" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.17075 -0.0 -0.0776" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://il_three_dof_servo_arm_urdf_compatible_description/meshes/link_2_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.17075 -0.0 -0.0776" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://il_three_dof_servo_arm_urdf_compatible_description/meshes/link_2_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_2_2_1">
+  <inertial>
+    <origin xyz="0.014291543311493432 -0.004352329737747492 -1.9761969838327786e-14" rpy="0 0 0"/>
+    <mass value="0.007218982086139781"/>
+    <inertia ixx="1e-06" iyy="1e-06" izz="1e-06" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.1915 -0.0135 -0.0545" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://il_three_dof_servo_arm_urdf_compatible_description/meshes/link_2_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.1915 -0.0135 -0.0545" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://il_three_dof_servo_arm_urdf_compatible_description/meshes/link_2_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_2_3_1">
+  <inertial>
+    <origin xyz="0.02210018126780225 -1.3647720106813033e-14 -1.3739009929736312e-14" rpy="0 0 0"/>
+    <mass value="0.022671389167279683"/>
+    <inertia ixx="1.4e-05" iyy="2.2e-05" izz="1e-05" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.2165 0.001 -0.0545" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://il_three_dof_servo_arm_urdf_compatible_description/meshes/link_2_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.2165 0.001 -0.0545" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://il_three_dof_servo_arm_urdf_compatible_description/meshes/link_2_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_3_1_1">
+  <inertial>
+    <origin xyz="0.010027736053711711 0.0010298469529679821 -0.026042147783260285" rpy="0 0 0"/>
+    <mass value="0.10446533796903502"/>
+    <inertia ixx="1.9e-05" iyy="3.1e-05" izz="2.1e-05" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.269 0.001 -0.08" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://il_three_dof_servo_arm_urdf_compatible_description/meshes/link_3_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.269 0.001 -0.08" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://il_three_dof_servo_arm_urdf_compatible_description/meshes/link_3_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_3_2_1">
+  <inertial>
+    <origin xyz="0.014291543311493349 -0.004352329737747514 -1.9782786520039508e-14" rpy="0 0 0"/>
+    <mass value="0.007218982086139781"/>
+    <inertia ixx="1e-06" iyy="1e-06" izz="1e-06" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.28975 -0.0125 -0.0569" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://il_three_dof_servo_arm_urdf_compatible_description/meshes/link_3_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.28975 -0.0125 -0.0569" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://il_three_dof_servo_arm_urdf_compatible_description/meshes/link_3_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_4_1_1">
+  <inertial>
+    <origin xyz="0.01070845668850634 1.976023511485181e-14 -0.010147670262252488" rpy="0 0 0"/>
+    <mass value="0.007218982086139781"/>
+    <inertia ixx="1e-06" iyy="1e-06" izz="1e-06" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.31475 0.002 -0.0569" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://il_three_dof_servo_arm_urdf_compatible_description/meshes/link_4_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.31475 0.002 -0.0569" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://il_three_dof_servo_arm_urdf_compatible_description/meshes/link_4_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="ee_1">
+  <inertial>
+    <origin xyz="1.2045919817182948e-13 9.540979117872439e-18 -0.017499999999999925" rpy="0 0 0"/>
+    <mass value="0.06824310014657918"/>
+    <inertia ixx="9e-06" iyy="9e-06" izz="4e-06" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.33975 0.002 -0.0404" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://il_three_dof_servo_arm_urdf_compatible_description/meshes/ee_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.33975 0.002 -0.0404" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://il_three_dof_servo_arm_urdf_compatible_description/meshes/ee_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Rigid_46" type="fixed">
+  <origin xyz="0.045 0.0 0.03" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="link_1_1_1"/>
+</joint>
+
+<joint name="joint_1" type="revolute">
+  <origin xyz="0.02075 0.0 0.0476" rpy="0 0 0"/>
+  <limit effort="1000.0" lower="-1.57" upper="1.57" velocity="1.0" />
+  <parent link="link_1_1_1"/>
+  <child link="link_1_2_1"/>
+  <axis xyz="-0.0 0.0 -1.0"/>
+</joint>
+
+<joint name="Rigid_48" type="fixed">
+  <origin xyz="0.0525 0.0 -0.0255" rpy="0 0 0"/>
+  <parent link="link_1_2_1"/>
+  <child link="link_1_3_1"/>
+</joint>
+
+<joint name="joint_2" type="revolute">
+  <origin xyz="0.0525 0.0 0.0255" rpy="0 0 0"/>
+  <limit effort="1000.0" lower="-1.57" upper="1.57" velocity="1.0" />
+  <parent link="link_1_3_1"/>
+  <child link="link_2_1_1"/>
+  <axis xyz="-0.0 0.0 1.0"/>
+</joint>
+
+<joint name="Rigid_50" type="fixed">
+  <origin xyz="0.02075 0.0135 -0.0231" rpy="0 0 0"/>
+  <parent link="link_2_1_1"/>
+  <child link="link_2_2_1"/>
+</joint>
+
+<joint name="Rigid_51" type="fixed">
+  <origin xyz="0.025 -0.0145 0.0" rpy="0 0 0"/>
+  <parent link="link_2_2_1"/>
+  <child link="link_2_3_1"/>
+</joint>
+
+<joint name="joint_3" type="revolute">
+  <origin xyz="0.0525 0.0 0.0255" rpy="0 0 0"/>
+  <limit effort="1000.0" lower="-1.57" upper="1.57" velocity="1.0" />
+  <parent link="link_2_3_1"/>
+  <child link="link_3_1_1"/>
+  <axis xyz="-0.0 -0.0 1.0"/>
+</joint>
+
+<joint name="Rigid_53" type="fixed">
+  <origin xyz="0.02075 0.0135 -0.0231" rpy="0 0 0"/>
+  <parent link="link_3_1_1"/>
+  <child link="link_3_2_1"/>
+</joint>
+
+<joint name="Rigid_55" type="fixed">
+  <origin xyz="0.025 -0.0145 0.0" rpy="0 0 0"/>
+  <parent link="link_3_2_1"/>
+  <child link="link_4_1_1"/>
+</joint>
+
+<joint name="Rigid_56" type="fixed">
+  <origin xyz="0.025 0.0 -0.0165" rpy="0 0 0"/>
+  <parent link="link_4_1_1"/>
+  <child link="ee_1"/>
+</joint>
+
+</robot>

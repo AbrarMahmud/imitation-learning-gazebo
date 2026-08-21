@@ -1,0 +1,37 @@
+joint_state_controller:
+  type: joint_state_controller/JointStateController
+  publish_rate: 50
+  # The actual hardware controller executing the trajectories sent by MoveIt
+arm_ctrl:
+    type: position_controllers/JointTrajectoryController  # Changed back to effort to use the gains below
+    joints:
+      - joint_1
+      - joint_2
+      - joint_3
+    gains:
+      joint_1:
+        p: 2
+        d: 0.01
+        i: 0
+        i_clamp: 1
+      joint_2:
+        p: 2
+        d: 0.01
+        i: 0
+        i_clamp: 1
+      joint_3:
+        p: 2
+        d: 0.01
+        i: 0
+        i_clamp: 1
+        
+controller_list:
+    - name: arm_ctrl
+      action_ns: follow_joint_trajectory
+      type: FollowJointTrajectory
+      default: true
+      joints:
+        - joint_1
+        - joint_2
+        - joint_3
+

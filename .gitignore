@@ -1,0 +1,33 @@
+# ROS / Catkin build files
+build/
+devel/
+install/
+logs/
+
+# Python
+*.pyc
+__pycache__/
+
+# Logs
+*.log
+
+# Temporary / backup files
+*.swp
+*.bak
+*.launch~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE settings
+.idea/
+.vscode/
+
+# ROS recorded data
+*.bag
+*.db
+
+# Environment variables / secrets
+src/push_t_env/scripts/.env
+.env

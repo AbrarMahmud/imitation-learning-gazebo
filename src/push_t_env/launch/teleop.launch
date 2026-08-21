@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+  <node respawn="true" pkg="joy" type="joy_node" name="joy_node" output="screen">
+    <param name="dev" type="string" value="/dev/input/js1" />
+    <param name="deadzone" value="0.1" />
+    <param name="autorepeat_rate" value="10.0" />
+  </node>
+
+  <node pkg="push_t_env" type="joystick_teleop.py" name="joystick_teleop" output="screen" />
+</launch>

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+  <rosparam file="$(find moveit_sol)/config/ros_controllers.yaml" command="load"/>
+
+<node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+      output="screen" args="arm_ctrl"/>
+</launch>

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<robot name="overhead_camera" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <link name="camera_link">
+    <inertial>
+      <mass value="0.01"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0001"/>
+    </inertial>
+
+    <visual>
+      <geometry><box size="0.05 0.05 0.05"/></geometry>
+    </visual>
+  </link>
+  
+  <gazebo reference="camera_link">
+    <sensor type="camera" name="overhead_cam_sensor">
+      <update_rate>30.0</update_rate>
+      <camera name="overhead">
+        <horizontal_fov>1.047</horizontal_fov>
+        <image><width>480</width><height>480</height><format>R8G8B8</format></image>
+        <clip><near>0.1</near><far>100</far></clip>
+      </camera>
+      <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+        <alwaysOn>true</alwaysOn>
+        <updateRate>30.0</updateRate>
+        <cameraName>push_t/overhead_camera</cameraName>
+        <imageTopicName>image_raw</imageTopicName>
+        <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+        <frameName>camera_link</frameName>
+      </plugin>
+    </sensor>
+  </gazebo>
+  
+  <gazebo><static>true</static></gazebo>
+</robot>
