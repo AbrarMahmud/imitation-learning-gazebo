@@ -4,8 +4,11 @@
 [![Dataset Converter](https://img.shields.io/badge/Kaggle-Dataset_Converter-20BEFF?logo=Kaggle)](https://www.kaggle.com/code/kaziabrarmahmud/ros-to-lerobot-port)
 [![Inference Server](https://img.shields.io/badge/Kaggle-Inference_Server-20BEFF?logo=Kaggle)](https://www.kaggle.com/code/kaziabrarmahmud/infer-server-lerobot-v1)
 
-[![Project Demo](https://img.youtube.com/vi/DUMMY_VIDEO_ID/maxresdefault.jpg)](https://www.youtube.com/watch?v=DUMMY_VIDEO_ID)
-*(Click the thumbnail above to watch the video demonstration. Replace `DUMMY_VIDEO_ID` with your actual YouTube video ID.)*
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=iT2fyZKa5s8">
+    <img src="https://img.youtube.com/vi/iT2fyZKa5s8/maxresdefault.jpg" alt="Watch the video" width="700">
+  </a>
+</p>
 
 
 ## Overview
